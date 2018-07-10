@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName SMScontext -MigrationsDirectory Migrations\SMSmigrations
+
+add-migration -ConfigurationTypeName SMS.Migrations.SMSmigrations.Configuration
+
+update-database -ConfigurationTypeName SMS.Migrations.SMSmigrations.Configuration

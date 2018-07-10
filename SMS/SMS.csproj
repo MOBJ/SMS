@@ -198,20 +198,45 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Data\DummyData.cs" />
+    <Compile Include="Data\SMScontext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\SMSmigrations\201807071656472_InitialCommit.cs" />
+    <Compile Include="Migrations\SMSmigrations\201807071656472_InitialCommit.Designer.cs">
+      <DependentUpon>201807071656472_InitialCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SMSmigrations\201807071934299_UserStatus_datatype_change.cs" />
+    <Compile Include="Migrations\SMSmigrations\201807071934299_UserStatus_datatype_change.Designer.cs">
+      <DependentUpon>201807071934299_UserStatus_datatype_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SMSmigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SMSmodels\Course.cs" />
+    <Compile Include="Models\SMSmodels\Department.cs" />
+    <Compile Include="Models\SMSmodels\Faculty.cs" />
+    <Compile Include="Models\SMSmodels\Gender.cs" />
+    <Compile Include="Models\SMSmodels\Programme.cs" />
+    <Compile Include="Models\SMSmodels\Semester.cs" />
+    <Compile Include="Models\SMSmodels\Student.cs" />
+    <Compile Include="Models\SMSmodels\UserStatus.cs" />
+    <Compile Include="Models\SMSmodels\Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-SMS-20180705052227.mdf" />
+    <Content Include="App_Data\aspnet-SMS-20180705052227_log.ldf">
+      <DependentUpon>aspnet-SMS-20180705052227.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DocObinna\TextFile1.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -391,9 +416,7 @@
     <Content Include="startbootstrap-sb-admin-gh-pages\vendor\jquery\jquery.min.map" />
     <Content Include="startbootstrap-sb-admin-gh-pages\vendor\jquery\jquery.slim.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -406,6 +429,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\SMSmigrations\201807071656472_InitialCommit.resx">
+      <DependentUpon>201807071656472_InitialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SMSmigrations\201807071934299_UserStatus_datatype_change.resx">
+      <DependentUpon>201807071934299_UserStatus_datatype_change.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
